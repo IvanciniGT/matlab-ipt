@@ -1,5 +1,5 @@
 function iniciarProgramaIPT()
-    clearvars; % Eliminar los valores de las variables de la ejecución anterior.
+    clearvars -GLOBAL; % Eliminar los valores de las variables de la ejecución anterior.
     tic; % Start timer.
     clc; % Borrar la pantalla.
     fprintf('Iniciando programa...\n'); % Mostrar un mensaje en la consola.

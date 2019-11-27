@@ -12,14 +12,13 @@ columnasGrid=4;
 %nombreFichero = 'hotcoffee.tif';
 nombreFichero = 'cafes.tif';
 imagenOriginal=cargarImagen(nombreFichero);
-imagenOriginalBorrosa = imgaussfilt(imagenOriginal, 2);
+imagenOriginalBorrosa = imgaussfilt(imagenOriginal, 2,'FilterSize',5,'FilterDomain', 'spatial');
 
 % Umbrales que se usará en la operación de quantizado
 umbrales = [15 140];
 % Convierte la imagen a la imagen quantizada, especificando unos umbrales específicos.
 imagenQuantizada = grayslice(imagenOriginalBorrosa,umbrales);
 %Quitamos huecos 
-imagenQuantizada = imfill(imagenQuantizada, 'holes');
 
 
 %Colorea la imagen para verla mejor
